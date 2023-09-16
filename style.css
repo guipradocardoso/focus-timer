@@ -5,12 +5,13 @@
 }
 
 :root {
-  font-size: 62.5%;
   --hue: 194;
   --bg-color: hsla(var(--hue), 5%, 7%, 1);
   --text-color: hsla(var(--hue), 40%, 98%, 1);
   --primary-color: hsla(var(--hue), 100%, 63%, 1);
   --controls--bg-color: hsla(var(--hue), 0%, 14%, 1);
+
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
 
 body {
@@ -27,4 +28,29 @@ body {
 }
 .flex {
   display: flex;
+}
+
+#timer {
+  font-size: 9.6rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#controls {
+  margin-top: 1.6rem;
+  padding: 2.2rem 4rem;
+  gap: 1.6rem;
+  background-color: var(--controls--bg-color);
+  border-radius: 999rem;
+}
+button {
+  background-color: transparent;
+  border: 0;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 6.4rem;
+}
+
+.secondary {
+  color: var(--text-color);
 }
